@@ -10,9 +10,6 @@ import SwiftUI
 struct ContentView: View {
     @State private var quote = Quote()
     
-    @State private var firstSavedQuote: Int = 0
-    @State private var lastSavedQuote: Int = 0
-    
     private var database = Database.shared
     
     var body: some View {
@@ -53,8 +50,8 @@ struct ContentView: View {
             .padding()
             
             VStack {
-                Text("First Saved Quote: Week \(firstSavedQuote)")
-                Text("Last Saved Quote: Week \(lastSavedQuote)")
+                Text("First Saved Quote: Week \(database.firstQuoteNumber)")
+                Text("Last Saved Quote: Week \(database.lastQuoteNumber)")
             }
             .padding()
         }
@@ -64,6 +61,7 @@ struct ContentView: View {
         do {
             try database.save(quote: quote)
             quote.reset()
+            // $quote.text = ""
         } catch {
             print(error)
         }
