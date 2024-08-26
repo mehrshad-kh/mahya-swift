@@ -8,7 +8,7 @@
 import Foundation
 
 struct Quote {
-    var weekNumber = ""
+    var weekNumber = 0
     var text = ""
     var author = ""
     var authorDescription = ""
@@ -16,7 +16,7 @@ struct Quote {
     var dateIntended = Date.now
     
     mutating func reset() {
-        weekNumber = ""
+        weekNumber = 0
         text = ""
         author = ""
         authorDescription = ""

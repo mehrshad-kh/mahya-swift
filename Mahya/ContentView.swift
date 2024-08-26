@@ -15,22 +15,35 @@ struct ContentView: View {
     var body: some View {
         HStack {
             VStack {
-                TextField(
-                    text: $quote.weekNumber,
-                    prompt: Text("Week #")
-                    // formatter: NumberFormatter()
-                ) {
-                    Text("Hello")
+                HStack {
+                    Text("Week #")
+                    TextField(
+                        "Required",
+                        value: $quote.weekNumber,
+                        formatter: NumberFormatter()
+                    )
                 }
                 .padding()
                 VStack {
-                    TextField("Text", text: $quote.text)
-                    TextField("Author", text: $quote.author)
+                    HStack {
+                        Text("Text")
+                        TextField("Required", text: $quote.text)
+                    }
+                    HStack {
+                        Text("Author")
+                        TextField("Required", text: $quote.author)
+                    }
                 }
                 .padding()
                 VStack {
-                    TextField("Author Description", text: $quote.authorDescription)
-                    TextField("Text Description", text: $quote.textDescription)
+                    HStack {
+                        Text("Author Description")
+                        TextField("Optional", text: $quote.authorDescription)
+                    }
+                    HStack {
+                        Text("Text Description")
+                        TextField("Optional", text: $quote.textDescription)
+                    }
                 }
                 .padding()
                 
@@ -40,6 +53,7 @@ struct ContentView: View {
                     displayedComponents: .date
                 )
                 .datePickerStyle(.graphical)
+                .padding()
                 
                 HStack {
                     Spacer()
