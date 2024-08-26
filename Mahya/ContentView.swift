@@ -16,7 +16,7 @@ struct ContentView: View {
         HStack {
             VStack {
                 HStack {
-                    Text("Week #")
+                    Text("Week #:")
                     TextField(
                         "Required",
                         value: $quote.weekNumber,
@@ -26,29 +26,29 @@ struct ContentView: View {
                 .padding()
                 VStack {
                     HStack {
-                        Text("Text")
-                        TextField("Required", text: $quote.text)
+                        Text("Text:")
+                        MultilineField("Required", text: $quote.text)
                     }
                     HStack {
-                        Text("Author")
+                        Text("Author:")
                         TextField("Required", text: $quote.author)
                     }
                 }
                 .padding()
                 VStack {
                     HStack {
-                        Text("Author Description")
-                        TextField("Optional", text: $quote.authorDescription)
+                        Text("Author Description:")
+                        MultilineField("Optional", text: $quote.authorDescription)
                     }
                     HStack {
-                        Text("Text Description")
-                        TextField("Optional", text: $quote.textDescription)
+                        Text("Text Description:")
+                        MultilineField("Optional", text: $quote.textDescription)
                     }
                 }
                 .padding()
                 
                 DatePicker(
-                    "Date Intended",
+                    "Date Intended:",
                     selection: $quote.dateIntended,
                     displayedComponents: .date
                 )
@@ -75,7 +75,7 @@ struct ContentView: View {
     
     func save() {
         do {
-            // try database.save(quote: quote)
+            try database.save(quote: quote)
             quote.reset()
         } catch {
             print(error)

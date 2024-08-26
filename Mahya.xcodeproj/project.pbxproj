@@ -11,6 +11,7 @@
 		B9710FBF2B358E9E00C151C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9710FBE2B358E9E00C151C6 /* ContentView.swift */; };
 		B9710FC12B358EA100C151C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9710FC02B358EA100C151C6 /* Assets.xcassets */; };
 		B9710FC42B358EA100C151C6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9710FC32B358EA100C151C6 /* Preview Assets.xcassets */; };
+		B9AD30FB2C7C620A00073462 /* MultilineField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AD30FA2C7C620A00073462 /* MultilineField.swift */; };
 		B9B4A1282C73951200157264 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = B9B4A1272C73951200157264 /* GRDB */; };
 		B9E5D3402C7340070041CA57 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E5D33F2C7340070041CA57 /* Quote.swift */; };
 		B9E5D3422C7346070041CA57 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E5D3412C7346070041CA57 /* Database.swift */; };
@@ -24,6 +25,7 @@
 		B9710FC02B358EA100C151C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9710FC32B358EA100C151C6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B9710FC52B358EA100C151C6 /* Mahya.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mahya.entitlements; sourceTree = "<group>"; };
+		B9AD30FA2C7C620A00073462 /* MultilineField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilineField.swift; sourceTree = "<group>"; };
 		B9E5D33F2C7340070041CA57 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		B9E5D3412C7346070041CA57 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,6 +64,7 @@
 				B9710FBC2B358E9E00C151C6 /* MahyaApp.swift */,
 				B9E5D3412C7346070041CA57 /* Database.swift */,
 				B9710FBE2B358E9E00C151C6 /* ContentView.swift */,
+				B9AD30FA2C7C620A00073462 /* MultilineField.swift */,
 				B91B96A52C774ADA000E1F73 /* CHANGELOG.md */,
 				B9E5D33F2C7340070041CA57 /* Quote.swift */,
 				B9710FC02B358EA100C151C6 /* Assets.xcassets */,
@@ -156,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9710FBF2B358E9E00C151C6 /* ContentView.swift in Sources */,
+				B9AD30FB2C7C620A00073462 /* MultilineField.swift in Sources */,
 				B9E5D3402C7340070041CA57 /* Quote.swift in Sources */,
 				B9E5D3422C7346070041CA57 /* Database.swift in Sources */,
 				B9710FBD2B358E9E00C151C6 /* MahyaApp.swift in Sources */,
@@ -299,7 +303,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mkh.Mahya;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -328,7 +332,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mkh.Mahya;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
