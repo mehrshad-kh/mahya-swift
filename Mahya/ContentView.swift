@@ -16,10 +16,12 @@ struct ContentView: View {
         HStack {
             VStack {
                 TextField(
-                    "Week #",
-                    value: $quote.weekNumber,
-                    formatter: NumberFormatter()
-                )
+                    text: $quote.weekNumber,
+                    prompt: Text("Week #")
+                    // formatter: NumberFormatter()
+                ) {
+                    Text("Hello")
+                }
                 .padding()
                 VStack {
                     TextField("Text", text: $quote.text)
@@ -59,9 +61,8 @@ struct ContentView: View {
     
     func save() {
         do {
-            try database.save(quote: quote)
+            // try database.save(quote: quote)
             quote.reset()
-            // $quote.text = ""
         } catch {
             print(error)
         }
