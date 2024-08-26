@@ -20,7 +20,7 @@ struct MultilineField: View {
     var body: some View {
         if #available(macOS 13.0, *) {
             TextField(titleKey, text: $text, axis: .vertical)
-                .lineLimit(1...5)
+                .lineLimit(1...4)
         } else {
             TextEditor(text: $text)
                 .border(.green)
